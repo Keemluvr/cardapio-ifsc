@@ -1,13 +1,13 @@
-package ifsc.projetos.pesquisa.sd.cardapioifsc;
+package ifsc.sd.cardapio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CardapioIfscApplication {
+public class CardapioApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CardapioIfscApplication.class, args);
+		SpringApplication.run(CardapioApplication.class, args);
 	}
 
 }

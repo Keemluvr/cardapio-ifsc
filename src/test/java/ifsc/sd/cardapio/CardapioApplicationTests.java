@@ -1,10 +1,10 @@
-package ifsc.projetos.pesquisa.sd.cardapioifsc;
+package ifsc.sd.cardapio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CardapioIfscApplicationTests {
+class CardapioApplicationTests {
 
 	@Test
 	void contextLoads() {
