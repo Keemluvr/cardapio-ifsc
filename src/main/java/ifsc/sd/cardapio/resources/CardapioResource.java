@@ -41,7 +41,7 @@ public class CardapioResource {
 	}
 	
 	
-	@GetMapping("/item/{dia:[0-9]+}")
+	@GetMapping("/cardapio/{dia:[0-9]+}")
 	@ApiOperation(value="Retorna um cardápio daquele dia")
 	public Cardapio listaCardapioDia(@PathVariable(value = "dia") long dia) {
 		return cardapioRepository.findByDia(dia);
@@ -55,7 +55,7 @@ public class CardapioResource {
 	}
 	
 	
-	@DeleteMapping("/produto")
+	@DeleteMapping("/cardapio")
 	@ApiOperation(value="Deleta um cardápio")
 	public void deletaCardapio(@RequestBody Cardapio cardapio) {
 		cardapioRepository.delete(cardapio);
