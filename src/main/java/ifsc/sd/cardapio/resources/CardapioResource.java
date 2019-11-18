@@ -33,11 +33,20 @@ public class CardapioResource {
 		return cardapioRepository.findAll();
 	}
 	
-	@GetMapping("/cardapio/{id}")
+	
+	@GetMapping("/cardapio/{id:[0-9]+}")
 	@ApiOperation(value="Retorna um cardápio único pelo seu id")
 	public Cardapio listaCardapio(@PathVariable(value="id") long id) {
 		return cardapioRepository.findById(id);
 	}
+	
+	
+	@GetMapping("/item/{dia:[0-9]+}")
+	@ApiOperation(value="Retorna um cardápio daquele dia")
+	public Cardapio listaCardapioDia(@PathVariable(value = "dia") long dia) {
+		return cardapioRepository.findByDia(dia);
+	}
+	
 	
 	@PostMapping("/cardapio")
 	@ApiOperation(value="Salva um cardápio")
@@ -45,11 +54,13 @@ public class CardapioResource {
 		return cardapioRepository.save(cardapio);
 	}
 	
+	
 	@DeleteMapping("/produto")
 	@ApiOperation(value="Deleta um cardápio")
 	public void deletaCardapio(@RequestBody Cardapio cardapio) {
 		cardapioRepository.delete(cardapio);
 	}
+	
 	
 	@PutMapping("/cardapio")
 	@ApiOperation(value="Atualiza um cardápio")
