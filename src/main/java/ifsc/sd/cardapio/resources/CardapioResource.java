@@ -34,13 +34,6 @@ public class CardapioResource {
 	}
 	
 	
-	@GetMapping("/cardapio/{id:[0-9]+}")
-	@ApiOperation(value="Retorna um cardápio único pelo seu id")
-	public Cardapio listaCardapio(@PathVariable(value="id") long id) {
-		return cardapioRepository.findById(id);
-	}
-	
-	
 	@GetMapping("/cardapio/{dia:[0-9]+}")
 	@ApiOperation(value="Retorna um cardápio daquele dia")
 	public Cardapio listaCardapioDia(@PathVariable(value = "dia") long dia) {

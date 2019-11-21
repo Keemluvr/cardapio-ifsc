@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_produto")
+@Table(name = "tb_cardapio")
 public class Cardapio implements Serializable {
 
 	private static final long serialVersionUID = 1L;
