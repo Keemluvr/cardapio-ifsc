@@ -48,10 +48,10 @@ public class CardapioResource {
 	}
 	
 	
-	@DeleteMapping("/cardapio")
+	@DeleteMapping("/cardapio/{id}")
 	@ApiOperation(value="Deleta um cardápio")
-	public void deletaCardapio(@RequestBody Cardapio cardapio) {
-		cardapioRepository.delete(cardapio);
+	public void deletaCardapio(@PathVariable(value="id") long id) {
+		cardapioRepository.deleteById(id);
 	}
 	
 	
