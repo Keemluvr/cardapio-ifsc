@@ -28,6 +28,7 @@ public class Cardapio implements Serializable {
 	private String quartoPrato;
 	private String quintoPrato;
 	private String sextoPrato;
+	private String setimoPrato;
 
 	public long getId() {
 		return id;
@@ -111,6 +112,14 @@ public class Cardapio implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public String getSetimoPrato() {
+		return setimoPrato;
+	}
+
+	public void setSetimoPrato(String setimoPrato) {
+		this.setimoPrato = setimoPrato;
 	}
 
 }
