@@ -34,12 +34,17 @@ public class CardapioResource {
 	}
 	
 	
-	@GetMapping("/cardapio/{dia:[0-9]+}")
+	@GetMapping("/cardapio/dia/{dia:[0-9]+}")
 	@ApiOperation(value="Retorna um cardápio daquele dia")
 	public Cardapio listaCardapioDia(@PathVariable(value = "dia") long dia) {
 		return cardapioRepository.findByDia(dia);
 	}
 	
+	@GetMapping("/cardapio/id/{id:[0-9]+}")
+	@ApiOperation(value="Retorna um cardápio daquele id")
+	public Cardapio listaCardapioId(@PathVariable(value = "id") long id) {
+		return cardapioRepository.findById(id);
+	}
 	
 	@PostMapping("/cardapio")
 	@ApiOperation(value="Salva um cardápio")
